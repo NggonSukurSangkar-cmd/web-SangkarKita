@@ -1,11 +1,14 @@
-<!-- FILE : produk.html -->
+<!-- PERBAIKI FILE index.html -->
+<!-- MASALAHNYA karena nama gambar belum sesuai -->
+<!-- Upload foto yang kamu kirim tadi ke repository -->
+<!-- lalu beri nama: laut.jpg -->
 
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NggonSukurSangkar - Produk</title>
+<title>SangkarKita - Home</title>
 
 <style>
 *{
@@ -17,7 +20,6 @@ font-family:Arial, Helvetica, sans-serif;
 
 body{
 background:#f8fafc;
-color:#111827;
 }
 
 /* HEADER */
@@ -29,13 +31,13 @@ padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(15,23,42,0.92);
+background:rgba(0,0,0,0.45);
 backdrop-filter:blur(8px);
 z-index:1000;
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:bold;
 color:#facc15;
 }
@@ -54,99 +56,94 @@ color:#facc15;
 
 /* HERO */
 .hero{
-padding:140px 8% 70px;
-text-align:center;
-background:linear-gradient(135deg,#0f172a,#1e293b);
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:120px 8%;
+background:
+linear-gradient(to right, rgba(0,0,0,0.72), rgba(0,0,0,0.28)),
+url("laut.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.box{
+max-width:650px;
+padding:45px;
+border-radius:25px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.15);
+}
+
+.box h1{
+font-size:62px;
+line-height:1.15;
 color:white;
+margin-bottom:20px;
 }
 
-.hero h1{
-font-size:48px;
-margin-bottom:15px;
+.box span{
+color:#facc15;
 }
 
-.hero p{
-font-size:18px;
-color:#cbd5e1;
-max-width:700px;
-margin:auto;
+.box p{
+font-size:20px;
+color:#e5e7eb;
 line-height:1.8;
-}
-
-/* PRODUK */
-.section{
-padding:70px 8%;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-gap:28px;
-}
-
-.card{
-background:white;
-border-radius:22px;
-overflow:hidden;
-box-shadow:0 15px 35px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card img{
-width:100%;
-height:240px;
-object-fit:cover;
-}
-
-.content{
-padding:22px;
-}
-
-.content h3{
-font-size:22px;
-margin-bottom:10px;
-}
-
-.desc{
-color:#64748b;
-line-height:1.6;
-margin-bottom:15px;
-font-size:15px;
-}
-
-.price{
-font-size:26px;
-font-weight:bold;
-color:#f59e0b;
-margin-bottom:18px;
+margin-bottom:35px;
 }
 
 .btn{
 display:inline-block;
-padding:12px 22px;
+padding:15px 35px;
 background:linear-gradient(135deg,#f59e0b,#facc15);
-color:#111827;
+color:#111;
 font-weight:bold;
 text-decoration:none;
-border-radius:30px;
+border-radius:40px;
 transition:0.3s;
+box-shadow:0 10px 25px rgba(250,204,21,0.35);
 }
 
 .btn:hover{
-transform:translateY(-3px);
+transform:translateY(-4px);
 }
 
-/* FOOTER */
+/* INFO */
+.info{
+padding:70px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:-40px;
+position:relative;
+z-index:2;
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:18px;
+box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#111827;
+}
+
+.card p{
+color:#64748b;
+line-height:1.6;
+}
+
 footer{
 background:#0f172a;
 color:white;
 text-align:center;
-padding:28px;
-margin-top:60px;
+padding:25px;
 }
 
 @media(max-width:900px){
@@ -155,8 +152,16 @@ nav{
 display:none;
 }
 
-.hero h1{
-font-size:34px;
+.box h1{
+font-size:42px;
+}
+
+.box p{
+font-size:17px;
+}
+
+.hero{
+padding-top:140px;
 }
 
 }
@@ -166,7 +171,7 @@ font-size:34px;
 <body>
 
 <header>
-<div class="logo">NggonSukurSangkar</div>
+<div class="logo">SangkarKita</div>
 
 <nav>
 <a href="index.html">Home</a>
@@ -177,101 +182,42 @@ font-size:34px;
 </header>
 
 <section class="hero">
-<h1>Produk Sangkar Burung</h1>
+
+<div class="box">
+<h1>Sangkar Burung <span>Elegan</span> Untuk Koleksi Terbaik</h1>
+
 <p>
-Koleksi sangkar murai terbaik dari model standar hingga ukiran premium.
-Kuat, elegan, dan siap menunjang penampilan burung juara Anda.
+Temukan sangkar burung premium dengan desain modern,
+finishing mewah, dan kualitas terbaik untuk murai,
+kacer, lovebird, hingga koleksi hobi Anda.
 </p>
+
+<a href="produk.html" class="btn">Lihat Produk</a>
+</div>
+
 </section>
 
-<section class="section">
+<section class="info">
 
-<div class="grid">
-
-<!-- PRODUK 1 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80">
-<div class="content">
-<h3>Sangkar Murai Standar</h3>
-<p class="desc">
-Model sederhana, kokoh, cocok untuk harian dan latihan.
-</p>
-<div class="price">Rp350.000</div>
-<a href="#" class="btn">Pesan Sekarang</a>
-</div>
+<h3>Desain Premium</h3>
+<p>Model modern dan elegan untuk koleksi terbaik.</p>
 </div>
 
-<!-- PRODUK 2 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&w=800&q=80">
-<div class="content">
-<h3>Sangkar Murai Minimalis</h3>
-<p class="desc">
-Desain modern dan bersih, cocok untuk rumah elegan.
-</p>
-<div class="price">Rp550.000</div>
-<a href="#" class="btn">Pesan Sekarang</a>
-</div>
+<h3>Bahan Berkualitas</h3>
+<p>Menggunakan material pilihan kuat dan tahan lama.</p>
 </div>
 
-<!-- PRODUK 3 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80">
-<div class="content">
-<h3>Sangkar Murai Jati</h3>
-<p class="desc">
-Material kayu jati kuat, awet, dan mewah.
-</p>
-<div class="price">Rp750.000</div>
-<a href="#" class="btn">Pesan Sekarang</a>
-</div>
-</div>
-
-<!-- PRODUK 4 -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=800&q=80">
-<div class="content">
-<h3>Sangkar Murai Ukir</h3>
-<p class="desc">
-Motif ukiran klasik premium untuk burung kelas kontes.
-</p>
-<div class="price">Rp1.250.000</div>
-<a href="#" class="btn">Pesan Sekarang</a>
-</div>
-</div>
-
-<!-- PRODUK 5 -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1494256997604-768d1f608cac?auto=format&fit=crop&w=800&q=80">
-<div class="content">
-<h3>Sangkar Murai Sultan</h3>
-<p class="desc">
-Ukiran full mewah, finishing glossy eksklusif.
-</p>
-<div class="price">Rp2.500.000</div>
-<a href="#" class="btn">Pesan Sekarang</a>
-</div>
-</div>
-
-<!-- PRODUK 6 -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1501706362039-c6e80948bff3?auto=format&fit=crop&w=800&q=80">
-<div class="content">
-<h3>Sangkar Murai Custom</h3>
-<p class="desc">
-Bisa request nama, warna, ukuran, dan desain pribadi.
-</p>
-<div class="price">Mulai Rp900.000</div>
-<a href="#" class="btn">Pesan Sekarang</a>
-</div>
-</div>
-
+<h3>Harga Terbaik</h3>
+<p>Langsung dari pengrajin tanpa perantara.</p>
 </div>
 
 </section>
 
 <footer>
-Copyright © NggonSukurSangkar
+Copyright © SangkarKita Store
 </footer>
 
 </body>
