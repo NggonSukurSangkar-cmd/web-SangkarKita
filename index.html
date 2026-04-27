@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Keren Sederhana</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ff0000,#ff7b00,#ffd000);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background:white;
+    width:90%;
+    max-width:700px;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    text-align:center;
+    animation:fadeIn 1s ease;
+}
+
+h1{
+    color:#ff0000;
+    margin-bottom:15px;
+    font-size:2.2rem;
+}
+
+h2{
+    color:#333;
+    margin-bottom:20px;
+}
+
+p{
+    color:#555;
+    margin-bottom:20px;
+    font-size:1.1rem;
+}
+
+button{
+    background:linear-gradient(90deg,#ff0000,#ff7300);
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:30px;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+    margin:10px;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+a{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    color:#ff0000;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+a:hover{
+    color:#000;
+}
+
+#pesan{
+    margin-top:20px;
+    font-size:1.2rem;
+    color:#111;
+    font-weight:bold;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>SELAMAT DATANG</h1>
+    <h2>Tampilan Web Lebih Menarik</h2>
+    <p>Pencet tombol di bawah ini:</p>
+
+    <button onclick="tampilPesan()">Klik Saya</button>
+    <button onclick="window.location.href='halaman_baru.html'">Halaman Baru</button>
+
+    <p id="pesan"></p>
+
+    <a href="halaman_baru.html">Atau klik di sini</a>
+</div>
+
+<script>
+function tampilPesan(){
+    document.getElementById("pesan").innerText = "Halo brooo, websitemu sekarang lebih keren 😎🔥";
+}
+</script>
+
+</body>
+</html>
