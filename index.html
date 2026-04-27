@@ -1,4 +1,7 @@
-<!-- GANTI FILE index.html MENJADI INI -->
+<!-- PERBAIKI FILE index.html -->
+<!-- MASALAHNYA karena nama gambar belum sesuai -->
+<!-- Upload foto yang kamu kirim tadi ke repository -->
+<!-- lalu beri nama: laut.jpg -->
 
 <!DOCTYPE html>
 <html lang="id">
@@ -21,20 +24,20 @@ background:#f8fafc;
 
 /* HEADER */
 header{
-background:rgba(15,23,42,0.92);
-backdrop-filter:blur(8px);
+position:fixed;
+top:0;
+width:100%;
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:fixed;
-width:100%;
-top:0;
-z-index:999;
+background:rgba(0,0,0,0.45);
+backdrop-filter:blur(8px);
+z-index:1000;
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:bold;
 color:#facc15;
 }
@@ -43,7 +46,7 @@ nav a{
 color:white;
 text-decoration:none;
 margin-left:25px;
-font-weight:500;
+font-size:17px;
 transition:0.3s;
 }
 
@@ -56,83 +59,79 @@ color:#facc15;
 min-height:100vh;
 display:flex;
 align-items:center;
-padding:120px 8% 80px;
+padding:120px 8%;
 background:
-linear-gradient(to right, rgba(15,23,42,0.88) 35%, rgba(15,23,42,0.45) 60%, rgba(15,23,42,0.15)),
-url("gambar-laut.jpg");
+linear-gradient(to right, rgba(0,0,0,0.72), rgba(0,0,0,0.28)),
+url("gambarku.jpeg");
 background-size:cover;
 background-position:center;
-position:relative;
+background-repeat:no-repeat;
 }
 
-.hero-box{
-max-width:620px;
+.box{
+max-width:650px;
+padding:45px;
+border-radius:25px;
 background:rgba(255,255,255,0.08);
 backdrop-filter:blur(10px);
-padding:45px;
-border-radius:24px;
 border:1px solid rgba(255,255,255,0.15);
-box-shadow:0 20px 40px rgba(0,0,0,0.25);
 }
 
-.hero h1{
-font-size:58px;
-line-height:1.2;
+.box h1{
+font-size:62px;
+line-height:1.15;
 color:white;
 margin-bottom:20px;
 }
 
-.hero h1 span{
+.box span{
 color:#facc15;
 }
 
-.hero p{
-font-size:18px;
+.box p{
+font-size:20px;
+color:#e5e7eb;
 line-height:1.8;
-color:#e2e8f0;
-margin-bottom:30px;
+margin-bottom:35px;
 }
 
 .btn{
 display:inline-block;
-padding:15px 30px;
+padding:15px 35px;
 background:linear-gradient(135deg,#f59e0b,#facc15);
-color:#111827;
+color:#111;
 font-weight:bold;
 text-decoration:none;
 border-radius:40px;
 transition:0.3s;
-box-shadow:0 10px 25px rgba(250,204,21,0.25);
+box-shadow:0 10px 25px rgba(250,204,21,0.35);
 }
 
 .btn:hover{
 transform:translateY(-4px);
 }
 
-/* CARD INFO */
+/* INFO */
 .info{
-margin-top:-60px;
-padding:0 8%;
-position:relative;
-z-index:5;
-}
-
-.info-grid{
+padding:70px 8%;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:-40px;
+position:relative;
+z-index:2;
 }
 
 .card{
 background:white;
 padding:28px;
-border-radius:20px;
+border-radius:18px;
 box-shadow:0 15px 30px rgba(0,0,0,0.08);
 }
 
 .card h3{
-color:#0f172a;
 margin-bottom:10px;
+color:#111827;
 }
 
 .card p{
@@ -140,9 +139,7 @@ color:#64748b;
 line-height:1.6;
 }
 
-/* FOOTER */
 footer{
-margin-top:70px;
 background:#0f172a;
 color:white;
 text-align:center;
@@ -151,20 +148,20 @@ padding:25px;
 
 @media(max-width:900px){
 
-.hero{
-padding-top:140px;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-.hero-box{
-padding:30px;
-}
-
 nav{
 display:none;
+}
+
+.box h1{
+font-size:42px;
+}
+
+.box p{
+font-size:17px;
+}
+
+.hero{
+padding-top:140px;
 }
 
 }
@@ -185,7 +182,8 @@ display:none;
 </header>
 
 <section class="hero">
-<div class="hero-box">
+
+<div class="box">
 <h1>Sangkar Burung <span>Elegan</span> Untuk Koleksi Terbaik</h1>
 
 <p>
@@ -196,27 +194,26 @@ kacer, lovebird, hingga koleksi hobi Anda.
 
 <a href="produk.html" class="btn">Lihat Produk</a>
 </div>
+
 </section>
 
 <section class="info">
-<div class="info-grid">
 
 <div class="card">
 <h3>Desain Premium</h3>
-<p>Tampilan modern dan elegan cocok untuk koleksi maupun lomba.</p>
+<p>Model modern dan elegan untuk koleksi terbaik.</p>
 </div>
 
 <div class="card">
 <h3>Bahan Berkualitas</h3>
-<p>Menggunakan kayu pilihan, kuat, awet, dan finishing rapi.</p>
+<p>Menggunakan material pilihan kuat dan tahan lama.</p>
 </div>
 
 <div class="card">
 <h3>Harga Terbaik</h3>
-<p>Langsung dari pengrajin dengan harga bersaing.</p>
+<p>Langsung dari pengrajin tanpa perantara.</p>
 </div>
 
-</div>
 </section>
 
 <footer>
