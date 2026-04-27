@@ -1,5 +1,3 @@
-<!-- FILE : kontak.html -->
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -81,6 +79,8 @@ text-decoration:none;
 border-radius:40px;
 transition:0.3s;
 box-shadow:0 10px 25px rgba(37,211,102,0.25);
+cursor:pointer;
+border:none;
 }
 
 .btn-wa:hover{
@@ -119,16 +119,36 @@ padding:25px;
 <p>Instagram : @nggonsukursangkar</p>
 <p>Alamat : Kudus, Jawa Tengah</p>
 
-<!-- GANTI NOMOR DI BAWAH -->
-<a href="https://wa.me/6285794182022?text=Halo%20saya%20ingin%20bertanya%20tentang%20sangkar%20burung" class="btn-wa" target="_blank">
+<button onclick="bukaWA()" class="btn-wa">
 Chat WhatsApp
-</a>
+</button>
 
 </div>
 
 <footer>
 Copyright © NggonSukurSangkar
 </footer>
+
+<script>
+function bukaWA(){
+
+let nomor = "6281234567890"; // GANTI NOMOR KAMU
+let pesan = "Halo saya ingin bertanya tentang sangkar burung";
+
+let mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+if(mobile){
+window.location.href =
+"whatsapp://send?phone=" + nomor + "&text=" + encodeURIComponent(pesan);
+}else{
+window.open(
+"https://web.whatsapp.com/send?phone=" + nomor + "&text=" + encodeURIComponent(pesan),
+"_blank"
+);
+}
+
+}
+</script>
 
 </body>
 </html>
