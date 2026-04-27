@@ -1,7 +1,4 @@
-<!-- ========================= -->
-<!-- FILE 1 = index.html -->
-<!-- HALAMAN HOME -->
-<!-- ========================= -->
+<!-- GANTI FILE index.html MENJADI INI -->
 
 <!DOCTYPE html>
 <html lang="id">
@@ -11,70 +8,165 @@
 <title>SangkarKita - Home</title>
 
 <style>
-body{
+*{
 margin:0;
-font-family:Arial;
-background:#f5f7fa;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
+body{
+background:#f8fafc;
+}
+
+/* HEADER */
 header{
-background:#0f172a;
+background:rgba(15,23,42,0.92);
+backdrop-filter:blur(8px);
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+position:fixed;
+width:100%;
+top:0;
+z-index:999;
 }
 
 .logo{
-color:#facc15;
 font-size:28px;
 font-weight:bold;
+color:#facc15;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:25px;
+font-weight:500;
+transition:0.3s;
 }
 
+nav a:hover{
+color:#facc15;
+}
+
+/* HERO */
 .hero{
-padding:100px 8%;
-text-align:center;
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:120px 8% 80px;
+background:
+linear-gradient(to right, rgba(15,23,42,0.88) 35%, rgba(15,23,42,0.45) 60%, rgba(15,23,42,0.15)),
+url("gambar-laut.jpg");
+background-size:cover;
+background-position:center;
+position:relative;
+}
+
+.hero-box{
+max-width:620px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:45px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,0.15);
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
 }
 
 .hero h1{
-font-size:52px;
-color:#0f172a;
+font-size:58px;
+line-height:1.2;
+color:white;
+margin-bottom:20px;
 }
 
-.hero span{
-color:#f59e0b;
+.hero h1 span{
+color:#facc15;
 }
 
 .hero p{
 font-size:18px;
-color:#555;
-max-width:700px;
-margin:auto;
-margin-top:20px;
+line-height:1.8;
+color:#e2e8f0;
+margin-bottom:30px;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:14px 28px;
-background:#f59e0b;
-color:white;
+padding:15px 30px;
+background:linear-gradient(135deg,#f59e0b,#facc15);
+color:#111827;
+font-weight:bold;
 text-decoration:none;
-border-radius:30px;
+border-radius:40px;
+transition:0.3s;
+box-shadow:0 10px 25px rgba(250,204,21,0.25);
 }
 
+.btn:hover{
+transform:translateY(-4px);
+}
+
+/* CARD INFO */
+.info{
+margin-top:-60px;
+padding:0 8%;
+position:relative;
+z-index:5;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+.card h3{
+color:#0f172a;
+margin-bottom:10px;
+}
+
+.card p{
+color:#64748b;
+line-height:1.6;
+}
+
+/* FOOTER */
 footer{
+margin-top:70px;
 background:#0f172a;
 color:white;
 text-align:center;
-padding:20px;
-margin-top:80px;
+padding:25px;
+}
+
+@media(max-width:900px){
+
+.hero{
+padding-top:140px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero-box{
+padding:30px;
+}
+
+nav{
+display:none;
+}
+
 }
 </style>
 </head>
@@ -93,253 +185,43 @@ margin-top:80px;
 </header>
 
 <section class="hero">
-<h1>Jual <span>Sangkar Burung</span> Premium</h1>
+<div class="hero-box">
+<h1>Sangkar Burung <span>Elegan</span> Untuk Koleksi Terbaik</h1>
+
 <p>
-Website penjualan sangkar burung berkualitas, modern, elegan,
-dan harga terbaik.
+Temukan sangkar burung premium dengan desain modern,
+finishing mewah, dan kualitas terbaik untuk murai,
+kacer, lovebird, hingga koleksi hobi Anda.
 </p>
 
 <a href="produk.html" class="btn">Lihat Produk</a>
+</div>
+</section>
+
+<section class="info">
+<div class="info-grid">
+
+<div class="card">
+<h3>Desain Premium</h3>
+<p>Tampilan modern dan elegan cocok untuk koleksi maupun lomba.</p>
+</div>
+
+<div class="card">
+<h3>Bahan Berkualitas</h3>
+<p>Menggunakan kayu pilihan, kuat, awet, dan finishing rapi.</p>
+</div>
+
+<div class="card">
+<h3>Harga Terbaik</h3>
+<p>Langsung dari pengrajin dengan harga bersaing.</p>
+</div>
+
+</div>
 </section>
 
 <footer>
-Copyright © SangkarKita
+Copyright © SangkarKita Store
 </footer>
-
-</body>
-</html>
-
-
-<!-- ========================= -->
-<!-- FILE 2 = produk.html -->
-<!-- HALAMAN PRODUK -->
-<!-- ========================= -->
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<title>Produk</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:#f5f7fa;
-}
-
-header{
-background:#0f172a;
-padding:20px 8%;
-}
-
-nav a{
-color:white;
-margin-right:20px;
-text-decoration:none;
-}
-
-h1{
-text-align:center;
-margin-top:40px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:50px 8%;
-}
-
-.card{
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-.price{
-color:#f59e0b;
-font-size:24px;
-font-weight:bold;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<nav>
-<a href="index.html">Home</a>
-<a href="produk.html">Produk</a>
-<a href="keunggulan.html">Keunggulan</a>
-<a href="kontak.html">Kontak</a>
-</nav>
-</header>
-
-<h1>Daftar Produk</h1>
-
-<div class="grid">
-
-<div class="card">
-<h3>Sangkar Minimalis</h3>
-<p class="price">Rp350.000</p>
-</div>
-
-<div class="card">
-<h3>Sangkar Premium</h3>
-<p class="price">Rp850.000</p>
-</div>
-
-<div class="card">
-<h3>Sangkar Besi Modern</h3>
-<p class="price">Rp500.000</p>
-</div>
-
-</div>
-
-</body>
-</html>
-
-
-
-<!-- ========================= -->
-<!-- FILE 3 = keunggulan.html -->
-<!-- HALAMAN KEUNGGULAN -->
-<!-- ========================= -->
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<title>Keunggulan</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:#f5f7fa;
-}
-
-header{
-background:#0f172a;
-padding:20px 8%;
-}
-
-nav a{
-color:white;
-margin-right:20px;
-text-decoration:none;
-}
-
-.section{
-padding:60px 8%;
-}
-
-.box{
-background:white;
-padding:25px;
-margin-bottom:20px;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<nav>
-<a href="index.html">Home</a>
-<a href="produk.html">Produk</a>
-<a href="keunggulan.html">Keunggulan</a>
-<a href="kontak.html">Kontak</a>
-</nav>
-</header>
-
-<div class="section">
-
-<div class="box">
-<h2>Material Berkualitas</h2>
-<p>Menggunakan bahan kayu pilihan terbaik.</p>
-</div>
-
-<div class="box">
-<h2>Harga Terjangkau</h2>
-<p>Harga langsung dari pengrajin.</p>
-</div>
-
-<div class="box">
-<h2>Pengiriman Aman</h2>
-<p>Dikemas dengan rapi dan aman.</p>
-</div>
-
-</div>
-
-</body>
-</html>
-
-
-
-<!-- ========================= -->
-<!-- FILE 4 = kontak.html -->
-<!-- HALAMAN KONTAK -->
-<!-- ========================= -->
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<title>Kontak</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:#f5f7fa;
-}
-
-header{
-background:#0f172a;
-padding:20px 8%;
-}
-
-nav a{
-color:white;
-margin-right:20px;
-text-decoration:none;
-}
-
-.box{
-max-width:600px;
-margin:80px auto;
-background:white;
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-text-align:center;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<nav>
-<a href="index.html">Home</a>
-<a href="produk.html">Produk</a>
-<a href="keunggulan.html">Keunggulan</a>
-<a href="kontak.html">Kontak</a>
-</nav>
-</header>
-
-<div class="box">
-<h1>Hubungi Kami</h1>
-<p>WhatsApp : 08xxxxxxxxxx</p>
-<p>Instagram : @sangkarkita</p>
-<p>Email : info@sangkarkita.com</p>
-</div>
 
 </body>
 </html>
