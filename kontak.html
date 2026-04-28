@@ -64,28 +64,59 @@ color:#0f172a;
 font-size:18px;
 color:#555;
 margin:12px 0;
+line-height:1.7;
 }
 
-/* BUTTON WA */
-.btn-wa{
+/* LINK MAPS */
+.map-link{
 display:inline-block;
-margin-top:25px;
+margin-top:10px;
+color:#2563eb;
+font-weight:bold;
+text-decoration:none;
+transition:0.3s;
+}
+
+.map-link:hover{
+color:#1d4ed8;
+}
+
+/* BUTTON */
+.btn-wa,
+.btn-maps{
+display:inline-block;
+margin-top:20px;
 padding:15px 30px;
-background:#25d366;
 color:white;
 font-size:18px;
 font-weight:bold;
 text-decoration:none;
 border-radius:40px;
 transition:0.3s;
-box-shadow:0 10px 25px rgba(37,211,102,0.25);
 cursor:pointer;
 border:none;
+margin-left:5px;
+margin-right:5px;
+}
+
+.btn-wa{
+background:#25d366;
+box-shadow:0 10px 25px rgba(37,211,102,0.25);
 }
 
 .btn-wa:hover{
 transform:translateY(-4px);
 background:#1ebe5d;
+}
+
+.btn-maps{
+background:#2563eb;
+box-shadow:0 10px 25px rgba(37,99,235,0.25);
+}
+
+.btn-maps:hover{
+transform:translateY(-4px);
+background:#1d4ed8;
 }
 
 footer{
@@ -94,6 +125,35 @@ background:#0f172a;
 color:white;
 text-align:center;
 padding:25px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+}
+
+nav a{
+margin-left:0;
+}
+
+.container{
+margin:40px 20px;
+padding:30px;
+}
+
+.container h1{
+font-size:32px;
+}
+
 }
 </style>
 </head>
@@ -117,11 +177,30 @@ padding:25px;
 
 <p>WhatsApp : 085794182022</p>
 <p>Instagram : @nggonsukursangkar</p>
-<p>Alamat : Jl. Kebunsawah, Pasuruhan Lor, Kec. Jati, Kabupaten Kudus, Jawa Tengah 59349</p>
+
+<p>
+Alamat : Jl. Kebunsawah, Pasuruhan Lor, Kec. Jati, Kabupaten Kudus, Jawa Tengah 59349
+</p>
+
+<a 
+href="https://www.google.com/maps/search/?api=1&query=Jl.+Kebunsawah,+Pasuruhan+Lor,+Jati,+Kudus,+Jawa+Tengah"
+target="_blank"
+class="map-link">
+📍 Lihat Lokasi di Google Maps
+</a>
+
+<br>
 
 <button onclick="bukaWA()" class="btn-wa">
 Chat WhatsApp
 </button>
+
+<a 
+href="https://www.google.com/maps/search/?api=1&query=Jl.+Kebunsawah,+Pasuruhan+Lor,+Jati,+Kudus,+Jawa+Tengah"
+target="_blank"
+class="btn-maps">
+Buka Maps
+</a>
 
 </div>
 
@@ -132,7 +211,7 @@ Copyright © NggonSukurSangkar
 <script>
 function bukaWA(){
 
-let nomor = "6285794182022"; // GANTI NOMOR KAMU
+let nomor = "6285794182022";
 let pesan = "Halo saya ingin bertanya tentang sangkar burung";
 
 let mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
