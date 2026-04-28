@@ -1,20 +1,16 @@
-<!-- ====================================================== -->
-<!-- FILE 1 : SEMUA HALAMAN DETAIL PRODUK -->
-<!-- TAMBAHKAN TOMBOL KEMBALI KE PRODUK -->
-<!-- ====================================================== -->
-
-<!-- CONTOH UNTUK detail-standar.html -->
+<!-- ======================================================= -->
+<!-- FILE 1 : detail-standar.html -->
+<!-- ======================================================= -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Detail Produk</title>
+<title>Sangkar Standar</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
 body{background:#f8fafc;}
-
 .wrap{
 padding:50px 8%;
 display:grid;
@@ -22,61 +18,25 @@ grid-template-columns:1fr 1fr;
 gap:40px;
 align-items:start;
 }
-
 img{
 width:100%;
 border-radius:20px;
 box-shadow:0 15px 30px rgba(0,0,0,.08);
 }
-
-h1{
-font-size:40px;
-margin-bottom:15px;
-}
-
-.price{
-font-size:34px;
-font-weight:bold;
-color:#f59e0b;
-margin-bottom:20px;
-}
-
-p{
-line-height:1.8;
-color:#555;
-margin-bottom:15px;
-}
-
+h1{font-size:42px;margin-bottom:15px;}
+.price{font-size:34px;color:#f59e0b;font-weight:bold;margin-bottom:20px;}
+p{line-height:1.8;color:#555;margin-bottom:15px;}
 .btn{
 display:inline-block;
 padding:14px 26px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
-margin-right:12px;
-margin-top:10px;
+margin-right:10px;
+margin-top:12px;
 }
-
-.btn-wa{
-background:#25d366;
-color:white;
-}
-
-.btn-back{
-background:#0f172a;
-color:white;
-}
-
-.btn:hover{
-opacity:.9;
-transform:translateY(-2px);
-}
-
-@media(max-width:900px){
-.wrap{
-grid-template-columns:1fr;
-}
-}
+.wa{background:#25d366;color:white;}
+.back{background:#0f172a;color:white;}
 </style>
 </head>
 <body>
@@ -84,35 +44,27 @@ grid-template-columns:1fr;
 <div class="wrap">
 
 <div>
-<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1520637836862-4d197d17c90a?auto=format&fit=crop&w=900&q=80">
 </div>
 
 <div>
-
 <h1>Sangkar Standar</h1>
-
 <div class="price">Rp350.000</div>
 
 <p>
-Sangkar model standar dengan konstruksi kokoh,
-nyaman untuk murai, kacer, anis dan cocok pemakaian harian.
+Model sederhana dan kokoh untuk penggunaan harian.
+Cocok murai, anis, kacer, dan lovebird.
 </p>
 
 <p>
-✔ Bahan kuat<br>
-✔ Ringan dipindah<br>
-✔ Finishing rapi<br>
-✔ Cocok pemula
+✔ Ringan<br>
+✔ Awet<br>
+✔ Harga ekonomis
 </p>
 
-<a href="https://wa.me/6285794182022?text=Halo%20saya%20ingin%20memesan%20Sangkar%20Standar" class="btn btn-wa">
-Pesan Sekarang
-</a>
+<a href="https://wa.me/6285794182022?text=Halo saya ingin memesan Sangkar Standar" class="btn wa">Pesan</a>
 
-<a href="produk.html" class="btn btn-back">
-← Kembali ke Produk
-</a>
-
+<a href="produk.html" class="btn back">← Kembali</a>
 </div>
 
 </div>
