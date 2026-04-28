@@ -1,31 +1,25 @@
+<!-- ================================================= -->
+<!-- FILE 1 : produk.html -->
+<!-- HALAMAN LIST PRODUK (klik gambar pindah detail) -->
+<!-- ================================================= -->
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marketplace Produk - NggonSukurSangkar</title>
+<title>Produk - NggonSukurSangkar</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
+body{background:#f1f5f9;}
 
-body{
-background:#f1f5f9;
-}
-
-/* HEADER */
 header{
 background:#0f172a;
 padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-flex-wrap:wrap;
-gap:15px;
 }
 
 .logo{
@@ -38,57 +32,19 @@ nav a{
 color:white;
 text-decoration:none;
 margin-left:18px;
-font-size:16px;
 }
 
-nav a:hover{
-color:#facc15;
-}
-
-/* HERO */
 .hero{
-padding:45px 8%;
+padding:50px 8%;
 text-align:center;
 background:linear-gradient(135deg,#0f172a,#1e293b);
 color:white;
 }
 
-.hero h1{
-font-size:42px;
-margin-bottom:10px;
-}
-
-.hero p{
-font-size:17px;
-color:#cbd5e1;
-}
-
-/* FILTER */
-.filter-box{
-padding:30px 8%;
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.filter-box input,
-.filter-box select{
-padding:12px 16px;
-border-radius:10px;
-border:1px solid #cbd5e1;
-font-size:16px;
-min-width:220px;
-}
-
-/* PRODUK GRID */
-.section{
-padding:20px 8% 60px;
-}
-
 .grid{
+padding:50px 8%;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
@@ -96,8 +52,8 @@ gap:25px;
 background:white;
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 12px 28px rgba(0,0,0,0.08);
-transition:0.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
 }
 
 .card:hover{
@@ -106,89 +62,37 @@ transform:translateY(-6px);
 
 .card img{
 width:100%;
-height:220px;
+height:230px;
 object-fit:cover;
+cursor:pointer;
 }
 
 .content{
 padding:20px;
 }
 
-.badge{
-display:inline-block;
-padding:6px 12px;
-font-size:13px;
-border-radius:20px;
-background:#dcfce7;
-color:#15803d;
-margin-bottom:12px;
-font-weight:bold;
-}
-
 .content h3{
-font-size:22px;
 margin-bottom:10px;
-}
-
-.desc{
-font-size:15px;
-color:#64748b;
-line-height:1.6;
-margin-bottom:14px;
+font-size:22px;
 }
 
 .price{
-font-size:28px;
+font-size:26px;
 font-weight:bold;
 color:#f59e0b;
-margin-bottom:18px;
+margin-top:10px;
 }
 
-.btn{
-display:inline-block;
-padding:12px 22px;
-background:#25d366;
-color:white;
+a.link{
 text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-cursor:pointer;
-border:none;
-width:100%;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#1ebe5d;
-}
-
-/* FOOTER */
-footer{
-background:#0f172a;
-color:white;
-text-align:center;
-padding:25px;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:32px;
-}
-
-nav{
-display:none;
-}
-
+color:inherit;
 }
 </style>
 </head>
-
 <body>
 
 <header>
 <div class="logo">NggonSukurSangkar</div>
-
 <nav>
 <a href="index.html">Home</a>
 <a href="produk.html">Produk</a>
@@ -198,125 +102,53 @@ display:none;
 </header>
 
 <section class="hero">
-<h1>Marketplace Sangkar Burung</h1>
-<p>Belanja sangkar terbaik langsung dari pengrajin terpercaya</p>
+<h1>Daftar Produk Sangkar</h1>
+<p>Klik gambar produk untuk melihat detail seperti marketplace</p>
 </section>
 
-<section class="filter-box">
-<input type="text" id="searchInput" placeholder="Cari produk..." onkeyup="filterProduk()">
+<section class="grid">
 
-<select id="filterHarga" onchange="filterProduk()">
-<option value="">Semua Harga</option>
-<option value="murah">Di bawah 500rb</option>
-<option value="sedang">500rb - 1jt</option>
-<option value="mahal">Di atas 1jt</option>
-</select>
-</section>
-
-<section class="section">
-
-<div class="grid" id="produkGrid">
-
-<!-- ITEM -->
-<div class="card produk" data-name="standar" data-price="350000">
+<a href="detail-standar.html" class="link">
+<div class="card">
 <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80">
 <div class="content">
-<span class="badge">Best Seller</span>
 <h3>Sangkar Standar</h3>
-<p class="desc">Cocok untuk pemula dan pemakaian harian.</p>
 <div class="price">Rp350.000</div>
-<button class="btn" onclick="pesanProduk('Sangkar Standar')">Pesan Sekarang</button>
 </div>
 </div>
+</a>
 
-<div class="card produk" data-name="minimalis" data-price="550000">
+<a href="detail-minimalis.html" class="link">
+<div class="card">
 <img src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&w=800&q=80">
 <div class="content">
-<span class="badge">Modern</span>
 <h3>Sangkar Minimalis</h3>
-<p class="desc">Desain elegan untuk rumah modern.</p>
 <div class="price">Rp550.000</div>
-<button class="btn" onclick="pesanProduk('Sangkar Minimalis')">Pesan Sekarang</button>
 </div>
 </div>
+</a>
 
-<div class="card produk" data-name="jati" data-price="850000">
+<a href="detail-jati.html" class="link">
+<div class="card">
 <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80">
 <div class="content">
-<span class="badge">Premium</span>
 <h3>Sangkar Jati</h3>
-<p class="desc">Kayu jati asli, kuat dan tahan lama.</p>
 <div class="price">Rp850.000</div>
-<button class="btn" onclick="pesanProduk('Sangkar Jati')">Pesan Sekarang</button>
 </div>
 </div>
+</a>
 
-<div class="card produk" data-name="ukiran" data-price="1250000">
+<a href="detail-ukiran.html" class="link">
+<div class="card">
 <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=800&q=80">
 <div class="content">
-<span class="badge">Eksklusif</span>
 <h3>Sangkar Ukiran</h3>
-<p class="desc">Ukiran mewah untuk kelas lomba.</p>
 <div class="price">Rp1.250.000</div>
-<button class="btn" onclick="pesanProduk('Sangkar Ukiran')">Pesan Sekarang</button>
 </div>
 </div>
-
-</div>
+</a>
 
 </section>
-
-<footer>
-Copyright © NggonSukurSangkar
-</footer>
-
-<script>
-function pesanProduk(namaProduk){
-
-let nomor = "6281234567890"; // ganti nomor WA
-let pesan = "Halo saya ingin memesan " + namaProduk;
-
-let mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-if(mobile){
-window.location.href =
-"whatsapp://send?phone=" + nomor + "&text=" + encodeURIComponent(pesan);
-}else{
-window.open(
-"https://web.whatsapp.com/send?phone=" + nomor + "&text=" + encodeURIComponent(pesan),
-"_blank"
-);
-}
-}
-
-function filterProduk(){
-
-let search = document.getElementById("searchInput").value.toLowerCase();
-let harga = document.getElementById("filterHarga").value;
-let items = document.querySelectorAll(".produk");
-
-items.forEach(function(item){
-
-let nama = item.dataset.name.toLowerCase();
-let price = parseInt(item.dataset.price);
-
-let cocokNama = nama.includes(search);
-let cocokHarga = true;
-
-if(harga == "murah") cocokHarga = price < 500000;
-if(harga == "sedang") cocokHarga = price >= 500000 && price <= 1000000;
-if(harga == "mahal") cocokHarga = price > 1000000;
-
-if(cocokNama && cocokHarga){
-item.style.display = "block";
-}else{
-item.style.display = "none";
-}
-
-});
-
-}
-</script>
 
 </body>
 </html>
