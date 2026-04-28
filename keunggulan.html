@@ -1,58 +1,223 @@
+<!-- ====================================================== -->
+<!-- FILE 2 : keunggulan.html (DESAIN BARU PREMIUM) -->
+<!-- ====================================================== -->
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Keunggulan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keunggulan - NggonSukurSangkar</title>
+
 <style>
-body{margin:0;font-family:Arial;background:#f8fafc;}
-header{background:#0f172a;padding:20px 8%;}
-nav a{color:white;text-decoration:none;margin-right:20px;}
-.section{
-padding:60px 8%;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
-.box{
-background:white;
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+color:white;
+}
+
+/* HEADER */
+header{
+padding:22px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#facc15;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:22px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#facc15;
+}
+
+/* HERO */
+.hero{
+padding:80px 8% 50px;
+text-align:center;
+}
+
+.hero h1{
+font-size:52px;
+margin-bottom:18px;
+}
+
+.hero p{
+font-size:20px;
+color:#cbd5e1;
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+/* CARD */
+.section{
+padding:40px 8% 70px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:28px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.1);
+backdrop-filter:blur(12px);
+padding:32px;
+border-radius:24px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+background:rgba(255,255,255,.12);
+}
+
+.icon{
+font-size:42px;
+margin-bottom:18px;
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:14px;
+color:#facc15;
+}
+
+.card p{
+line-height:1.8;
+color:#e2e8f0;
+}
+
+/* FOOTER */
+footer{
 padding:25px;
-margin-bottom:20px;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,.08);
+text-align:center;
+background:rgba(0,0,0,.25);
+color:#cbd5e1;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+nav{
+display:none;
+}
+
 }
 </style>
 </head>
 <body>
 
 <header>
+
+<div class="logo">NggonSukurSangkar</div>
+
 <nav>
 <a href="index.html">Home</a>
 <a href="produk.html">Produk</a>
 <a href="keunggulan.html">Keunggulan</a>
 <a href="kontak.html">Kontak</a>
 </nav>
+
 </header>
 
-<div class="section">
+<section class="hero">
 
-<div class="box">
-<h2>Kayu Berkualitas</h2>
-<p>Menggunakan material pilihan terbaik.</p>
+<h1>Mengapa Memilih Kami?</h1>
+
+<p>
+Kami menghadirkan sangkar burung berkualitas tinggi
+dengan perpaduan desain elegan, material pilihan,
+dan harga terbaik langsung dari pengrajin.
+</p>
+
+</section>
+
+<section class="section">
+
+<div class="card">
+<div class="icon">🏆</div>
+<h3>Kualitas Premium</h3>
+<p>
+Menggunakan bahan kayu pilihan, kuat, awet,
+dan tahan digunakan dalam jangka panjang.
+</p>
 </div>
 
-<div class="box">
-<h2>Desain Modern</h2>
-<p>Tampilan elegan dan cocok di rumah.</p>
+<div class="card">
+<div class="icon">🎨</div>
+<h3>Desain Eksklusif</h3>
+<p>
+Model modern, klasik, hingga ukiran mewah
+yang cocok untuk pecinta burung sejati.
+</p>
 </div>
 
-<div class="box">
-<h2>Finishing Premium</h2>
-<p>Rapi, halus, dan tahan lama.</p>
+<div class="card">
+<div class="icon">💰</div>
+<h3>Harga Bersahabat</h3>
+<p>
+Harga langsung dari pengrajin tanpa perantara,
+lebih hemat dan kompetitif.
+</p>
 </div>
 
-<div class="box">
-<h2>Harga Bersaing</h2>
-<p>Langsung dari pengrajin.</p>
+<div class="card">
+<div class="icon">🚚</div>
+<h3>Siap Kirim</h3>
+<p>
+Melayani pengiriman luar kota dengan packing aman
+dan terpercaya.
+</p>
 </div>
 
+<div class="card">
+<div class="icon">🛠️</div>
+<h3>Bisa Custom</h3>
+<p>
+Ukuran, warna, ukiran, hingga nama sangkar
+bisa disesuaikan sesuai keinginan.
+</p>
 </div>
+
+<div class="card">
+<div class="icon">⭐</div>
+<h3>Kepuasan Pelanggan</h3>
+<p>
+Banyak pelanggan puas dan repeat order
+karena kualitas dan pelayanan terbaik.
+</p>
+</div>
+
+</section>
+
+<footer>
+Copyright © NggonSukurSangkar
+</footer>
 
 </body>
 </html>
