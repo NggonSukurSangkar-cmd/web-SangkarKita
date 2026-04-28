@@ -1,48 +1,130 @@
 <!-- ======================================================= -->
-<!-- FILE 4 : detail-ukiran.html -->
+<!-- FILE : detail-ukiran.html -->
+<!-- GAMBAR SUDAH DIGANTI KE FILE SENDIRI -->
 <!-- ======================================================= -->
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Sangkar Ukiran</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sangkar Ukiran Mewah</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
-body{background:#f8fafc;}
-.wrap{padding:50px 8%;display:grid;grid-template-columns:1fr 1fr;gap:40px;}
-img{width:100%;border-radius:20px;}
-.price{font-size:34px;color:#f59e0b;font-weight:bold;}
-.btn{display:inline-block;padding:14px 26px;border-radius:30px;text-decoration:none;margin-top:15px;margin-right:10px;}
-.wa{background:#25d366;color:white;}
-.back{background:#0f172a;color:white;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f8fafc;
+}
+
+.wrap{
+padding:50px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:start;
+}
+
+img{
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+object-fit:cover;
+}
+
+h1{
+font-size:42px;
+margin-bottom:15px;
+color:#111827;
+}
+
+.price{
+font-size:34px;
+color:#f59e0b;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+p{
+line-height:1.8;
+color:#555;
+margin-bottom:15px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 26px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+margin-right:10px;
+margin-top:12px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.wa{
+background:#25d366;
+color:white;
+}
+
+.back{
+background:#0f172a;
+color:white;
+}
+
+@media(max-width:900px){
+.wrap{
+grid-template-columns:1fr;
+}
+}
 </style>
 </head>
+
 <body>
 
 <div class="wrap">
 
+<!-- GAMBAR PRODUK -->
 <div>
-<html src="ukiran.jpeg">
+<img src="ukiran.jpeg" alt="Sangkar Ukiran Mewah">
 </div>
 
+<!-- DETAIL PRODUK -->
 <div>
+
 <h1>Sangkar Ukiran Mewah</h1>
+
 <div class="price">Rp1.250.000</div>
 
 <p>
-Sangkar kelas premium dengan ukiran handmade.
-Cocok lomba dan koleksi.
+Sangkar kelas premium dengan ukiran handmade
+yang artistik dan bernilai tinggi.
+Cocok untuk lomba, koleksi, dan hiasan elegan.
 </p>
 
 <p>
-✔ Ukiran seni<br>
-✔ Finishing glossy<br>
-✔ Mewah dan eksklusif
+✔ Ukiran seni eksklusif<br>
+✔ Finishing glossy premium<br>
+✔ Mewah dan berkelas<br>
+✔ Cocok untuk kontes
 </p>
 
-<a href="https://wa.me/6285794182022?text=Halo saya ingin memesan Sangkar Ukiran Mewah" class="btn wa">Pesan</a>
+<a href="https://wa.me/6285794182022?text=Halo%20saya%20ingin%20memesan%20Sangkar%20Ukiran%20Mewah" class="btn wa">
+Pesan
+</a>
 
-<a href="produk.html" class="btn back">← Kembali</a>
+<a href="produk.html" class="btn back">
+← Kembali
+</a>
 
 </div>
 
